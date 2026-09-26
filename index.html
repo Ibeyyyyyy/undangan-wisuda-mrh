@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Undangan Wisuda — STIKes Mitra Ria Husada</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="glow glow-a"></div>
+  <div class="glow glow-b"></div>
+
+  <button id="audioBtn" class="audio-btn" aria-pressed="false">
+    <span class="ic">🔊</span><span class="lbl">Audio</span>
+  </button>
+  <audio id="bgAudio" loop preload="none">
+    <!-- Ganti src di bawah dengan file musik kamu, lalu hapus komentar -->
+    <!-- <source src="assets/musik.mp3" type="audio/mpeg"> -->
+  </audio>
+
+  <main class="card">
+    <div class="badges">
+      <div class="badge badge-a">STIKes<br>MRH</div>
+      <div class="badge badge-b">315<br>Wisudawan/i</div>
+    </div>
+
+    <p class="tagline">Skripsi? Beres. Sidang? Lulus. Next stop: panggung wisuda ✨</p>
+
+    <p class="eyebrow">— UNDANGAN WISUDA —</p>
+    <h1>WISUDA<br><span>ANGKATAN 2026</span></h1>
+    <p class="school">STIKES MITRA RIA HUSADA</p>
+    <div class="rule"></div>
+
+    <p class="kepada">Buat kamu yang paling spesial,</p>
+
+    <div class="guest-box">
+      <div class="name">Bapak / Ibu / Saudara/i</div>
+      <div class="sub">Tamu Undangan Wisudawan/i</div>
+    </div>
+
+    <div class="chips">
+      <span class="chip">🎓 315 Wisudawan/i</span>
+      <span class="chip">📅 Simak jadwal lengkap di dalam</span>
+    </div>
+
+    <div class="note warn">
+      <span class="ic">⚠️</span>
+      <span>Yuk saling jaga kenyamanan bersama — mohon untuk TIDAK membawa anak kecil ke lokasi acara, ya!</span>
+    </div>
+
+    <button class="cta" id="openInvite">Gas, Buka Undangan <span class="arrow">›</span></button>
+    <p class="footnote">Dengan penuh sukacita, kami mengundangmu untuk merayakan momen ini bareng-bareng 💙</p>
+  </main>
+
+  <!-- ===== SCREEN 2: APP (muncul setelah klik "Gas, Buka Undangan") ===== -->
+  <section class="app" id="appScreen" hidden>
+    <div class="app-inner">
+
+      <!-- TAB: INFO -->
+      <div class="tab-panel" data-panel="info">
+        <span class="pill">● WISUDA AKBAR 2026</span>
+        <h2>Informasi <span>Acara</span></h2>
+        <p class="sub">Jadwal &amp; dresscode Wisuda STIKes Mitra Ria Husada</p>
+        <div class="rule"></div>
+
+        <div class="panel-card">
+          <p class="panel-title">JADWAL PELAKSANAAN</p>
+
+          <div class="sched-card">
+            <div class="sched-head">
+              <span>🎓 Prosesi Wisuda</span>
+              <span class="date">Sabtu, 20 Juni 2026</span>
+            </div>
+            <div class="sched-body">
+              <p>🏛️ Auditorium Kampus STIKes Mitra Ria Husada</p>
+              <p>🕖 07.00 WIB — Selesai</p>
+            </div>
+          </div>
+
+          <div class="sched-card">
+            <div class="sched-head">
+              <span>🥳 Syukuran &amp; Foto Bareng</span>
+              <span class="date">Sabtu, 20 Juni 2026</span>
+            </div>
+            <div class="sched-body">
+              <p>📍 Lapangan Kampus</p>
+              <p>🕐 13.00 WIB — Selesai</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel-card">
+          <p class="panel-title">DRESSCODE</p>
+          <div class="dress-row">
+            <div class="dress-who">315 Wisudawan/i</div>
+            <div class="dress-tags">
+              <span class="tag">Toga Wisuda</span>
+              <span class="tag">Kemeja Putih</span>
+              <span class="tag">Sepatu Formal</span>
+            </div>
+          </div>
+          <div class="dress-row">
+            <div class="dress-who">Tamu Undangan</div>
+            <div class="dress-tags">
+              <span class="tag">Smart Casual</span>
+              <span class="tag">Warna Bebas Rapi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB: KONFIRMASI -->
+      <div class="tab-panel" data-panel="konfirmasi" hidden>
+        <span class="pill">● RSVP</span>
+        <h2>Konfirmasi <span>Kehadiran</span></h2>
+        <p class="sub">Bantu kami menyiapkan acara dengan konfirmasi kehadiranmu ✍️</p>
+        <div class="rule"></div>
+        <div class="panel-card">
+          <label class="field">
+            <span>Nama Lengkap</span>
+            <input id="guestName" type="text" placeholder="Tulis nama kamu">
+          </label>
+          <label class="field">
+            <span>Jumlah Tamu yang Hadir</span>
+            <input id="guestCount" type="number" min="1" max="3" placeholder="Maks. 3 orang">
+          </label>
+          <div class="rsvp-choice">
+            <button class="chip-btn active" data-status="hadir" type="button">✅ Hadir</button>
+            <button class="chip-btn" data-status="tidak-hadir" type="button">❌ Tidak Bisa Hadir</button>
+          </div>
+
+          <div class="rsvp-summary">
+            <div class="summary-box">
+              <span>Hadir</span>
+              <strong data-count="hadir">0</strong>
+            </div>
+            <div class="summary-box">
+              <span>Tidak Hadir</span>
+              <strong data-count="tidak-hadir">0</strong>
+            </div>
+          </div>
+
+          <button class="cta small" id="sendRsvp" type="button">Kirim Konfirmasi</button>
+
+          <div class="rsvp-list-wrap">
+            <p class="rsvp-list-title">Siapa yang sudah memilih?</p>
+            <div id="rsvpList" class="rsvp-list"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB: KURSI -->
+      <div class="tab-panel" data-panel="kursi" hidden>
+        <span class="pill">● SEAT FINDER</span>
+        <h2>Cek Nomor <span>Kursi</span></h2>
+        <p class="sub">Cari nomor kursimu biar nggak bingung pas hari-H</p>
+        <div class="rule"></div>
+        <div class="panel-card">
+          <label class="field">
+            <span>Cari nama kamu</span>
+            <input type="text" placeholder="Contoh: Ayu Lestari">
+          </label>
+          <button class="cta small" id="searchSeat">Cari Kursi</button>
+          <p class="hint">Hasil pencarian akan tampil di sini setelah data wisudawan/i disambungkan.</p>
+        </div>
+      </div>
+
+      <!-- TAB: LOKASI -->
+      <div class="tab-panel" data-panel="lokasi" hidden>
+        <span class="pill">● MAPS</span>
+        <h2>Lokasi <span>Acara</span></h2>
+        <p class="sub">Auditorium Kampus STIKes Mitra Ria Husada</p>
+        <div class="rule"></div>
+        <div class="panel-card">
+          <p class="addr">📍 Jl. Contoh Alamat No. 12, Jakarta</p>
+          <a class="cta small" href="https://maps.google.com" target="_blank" rel="noopener">Buka di Google Maps</a>
+        </div>
+      </div>
+
+      <!-- TAB: RUNDOWN -->
+      <div class="tab-panel" data-panel="rundown" hidden>
+        <span class="pill">● RUNDOWN</span>
+        <h2>Susunan <span>Acara</span></h2>
+        <p class="sub">Biar tau kapan momen kamu naik panggung 🎤</p>
+        <div class="rule"></div>
+        <div class="panel-card timeline">
+          <div class="tl-item"><span class="tl-time">07.00</span><span>Registrasi Wisudawan/i</span></div>
+          <div class="tl-item"><span class="tl-time">08.00</span><span>Prosesi Pembukaan</span></div>
+          <div class="tl-item"><span class="tl-time">09.00</span><span>Penyerahan Ijazah</span></div>
+          <div class="tl-item"><span class="tl-time">11.30</span><span>Sambutan &amp; Doa</span></div>
+          <div class="tl-item"><span class="tl-time">12.30</span><span>Penutupan</span></div>
+        </div>
+      </div>
+
+      <!-- TAB: TUTORIAL -->
+      <div class="tab-panel" data-panel="tutorial" hidden>
+        <span class="pill">● PANDUAN</span>
+        <h2>Tutorial <span>Livestream</span></h2>
+        <p class="sub">Nggak bisa datang langsung? Nonton dari rumah aja</p>
+        <div class="rule"></div>
+        <div class="panel-card">
+          <p>1. Buka YouTube Kampus STIKes Mitra Ria Husada</p>
+          <p>2. Cari video berjudul "Live Wisuda Akbar 2026"</p>
+          <p>3. Klik lonceng notifikasi biar nggak ketinggalan 🔔</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM NAV -->
+    <nav class="bottom-nav">
+      <button class="nav-btn active" data-tab="info"><span class="nav-ic">ℹ️</span><span>Info</span></button>
+      <button class="nav-btn" data-tab="konfirmasi"><span class="nav-ic">✅</span><span>Konfirmasi</span></button>
+      <button class="nav-btn" data-tab="kursi"><span class="nav-ic">🪑</span><span>Kursi</span></button>
+      <button class="nav-btn" data-tab="lokasi"><span class="nav-ic">📍</span><span>Lokasi</span></button>
+      <button class="nav-btn" data-tab="rundown"><span class="nav-ic">🗓️</span><span>Rundown</span></button>
+      <button class="nav-btn" data-tab="tutorial"><span class="nav-ic">▶️</span><span>Tutorial</span></button>
+    </nav>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
